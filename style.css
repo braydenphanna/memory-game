@@ -1,17 +1,57 @@
-.display{
-  text-align: left;
+
+.master{
+  background-color: black;
+  display:flex;
+  flex-wrap: wrap;
+  position: fixed;
+  place-content: center;
+  border: 3px solid black;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
+#tracker{
+  height:40px;
+  width:100%;
+  border: 3px solid black;
+  background-color: white;
+  display:flex;
+  place-items: center;
+  justify-content: center;
+
+}
+.step{
+  position: relative;
+  border-radius: 50%;
+  height: 80%;
+  aspect-ratio: 1 /1;
+  border: 3px solid black;
+  background-color: white;
+}
+#displayContainer{
   display: grid;
-  grid-template-columns: repeat(3, min-content);
+  grid-template-columns: repeat(3, auto);
+}
+#inputContainer{
+  display: grid;
+  grid-template-columns: repeat(3, auto);
 }
 .cell{
-  height: 200px;
-  width: 200px;
-  position:static;
+  height: 100px;
+  width: 100px;
   margin: 3px;
   border: 3px solid black;
   background-color: dimgray;
 }
+button{
+  height: 100px;
+  width: 100px;
+  margin: 3px;
+  z-index: -1;
+}
 @keyframes ping {
-  from {background-color: dimgray;}
-  to {background-color: yellow;}
+  15% {background-color: limegreen;}
+  85% {background-color: limegreen;}
 }
