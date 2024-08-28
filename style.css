@@ -1,26 +1,26 @@
-
+*{
+  margin: 0;
+}
+body{
+  background-color: black;
+}
 .master{
   background-color: black;
   display:flex;
   flex-wrap: wrap;
   position: fixed;
-  place-content: center;
-  border: 3px solid black;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  border-radius: 5px;
+  justify-content: center;
+  height:100%;
+  width: 100%;
 }
 #tracker{
-  height:40px;
+  position: relative;
+  height:6%;
   width:100%;
-  border: 3px solid black;
   background-color: white;
   display:flex;
   place-items: center;
   justify-content: center;
-
 }
 .step{
   position: relative;
@@ -31,27 +31,49 @@
   background-color: white;
 }
 #displayContainer{
+
   display: grid;
+  align-self: center;
+  border-right: 10px solid black;
+  border-bottom: 10px solid black;
+  height: 92%;
+  width: 49%;
   grid-template-columns: repeat(3, auto);
 }
 #inputContainer{
+  
   display: grid;
+  align-self: center;
+  height: 92%;
+  width: 49%;
+  border-bottom: 10px solid black;
   grid-template-columns: repeat(3, auto);
 }
 .cell{
-  height: 100px;
-  width: 100px;
-  margin: 3px;
-  border: 3px solid black;
-  background-color: dimgray;
-}
-button{
-  height: 100px;
-  width: 100px;
-  margin: 3px;
+  height: 100%;
+  width: 100%;
+  border-top: 10px solid black;
+  border-left: 10px solid black;
+  background-color: black;
+  
   z-index: -1;
 }
-@keyframes ping {
+.button{
+  height: 100%;
+  width: 100%;
+  border-top: 10px solid black;
+  border-right: 10px solid black;
+  z-index: -1;
+}
+@keyframes pingBlue {
+  15% {background-color: #44a7fe;}
+  85% {background-color: #44a7fe;}
+}
+@keyframes pingGreen {
   15% {background-color: limegreen;}
   85% {background-color: limegreen;}
+}
+@keyframes pingRed {
+  15% {background-color: #d12f00;}
+  85% {background-color: #d12f00;}
 }
